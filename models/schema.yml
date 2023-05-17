@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: raw_data
+    database: dbtdb # Tell dbt to look for the source in the "raw" database
+    schema: public # You wouldn't put your source data in public, would you?
+    tables:
+      - name: orders
+      - name: products
+
+models:
+  - name: demo_orders_products
+    description: "my first model"
+    columns:
+      - name: id
+      - name: created_timestamp
+      - name: name
+      - name: description

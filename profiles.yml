@@ -1,0 +1,24 @@
+default:
+  outputs:
+
+    dev:
+      type: postgres
+      threads: 4
+      host: localhost
+      port: 5433
+      user: dbtuser
+      pass: pssd
+      dbname: dbtdb
+      schema: public
+
+    prod:
+      type: postgres
+      threads: 4
+      host: localhost
+      port: 5433
+      user: dbtuser
+      pass: pssd
+      dbname: dbtdb
+      schema: public
+
+  target: dev
